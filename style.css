@@ -1,0 +1,153 @@
+/*Обнуление*/
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+html {
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+}
+
+/*Grid layout*/
+.wrapper {
+    margin-top: 2%;
+    display: grid;
+    gap: 5px 5px;
+	grid-template: minmax(20px, auto) minmax(50px, auto) minmax(20px, auto) 1fr minmax(20px, auto) minmax(70px, auto)/ 1fr;
+	grid-template-areas:
+	    "head1"	
+        "sity-container"
+        "head2"
+		"swiper-container"
+        "head3"
+		"data-day-weather";
+    justify-items: center;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.swiper-container {
+    grid-area: swiper-container;
+    background: rgba(96, 91, 91, 0.714);
+    width: 400px;
+    max-height: 400px;
+    display: grid;
+
+}
+
+.sity-container {
+    grid-area: sity-container;
+    background: rgba(96, 91, 91, 0.714);
+    max-height: 50px;
+    width: 400px;
+    display: grid;
+    grid-template: 1fr / minmax(55px, auto) 3fr 1fr;
+    
+}
+
+.data-day-weather {
+    grid-area: data-day-weather;
+    background: rgba(96, 91, 91, 0.714);
+    max-height: 100px;
+    width: 400px;
+    display: grid;
+    grid-template: 1fr / repeat(4, auto);
+}
+
+.data-element {
+    display: grid;
+    grid-template: 1fr 2fr 2fr / 1fr;
+    justify-items: center;
+}
+
+.input {
+    border-radius: 25px;
+    border: 2px solid rgb(133, 129, 129);
+}
+
+.button {
+    border-radius: 25px;
+    border: 2px solid rgb(133, 129, 129);
+    
+}
+
+button:hover {
+    opacity: 0.85;
+    cursor: pointer;
+    transform: scale(1.025);
+}
+button:active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* img */
+.map {
+    height: 50px;
+    width: 54px;
+    justify-content: center;
+    align-items: center;
+    align-self:center;
+}
+
+.icon {
+    height: 35px;
+    width: 25px;
+}
+
+.icon1 {
+    height: 45px;
+    width: 45px;
+}
+
+/* Оформление заголовков */
+
+.head1 {
+    background: rgba(0, 0, 0, 0.68);
+    width: 400px;
+    max-height: 16px;
+}
+
+.head2 {
+    background: rgba(0, 0, 0, 0.68);
+    width: 400px;
+    max-height: 16px;
+}
+
+.head3 {
+    background: rgba(0, 0, 0, 0.68);
+    width: 400px;
+    max-height: 16px;
+}
+
+
+
+
+
+/* ===Swiper=== */
+/* .swiper-container { 
+    grid-area: swiper-container;
+    width: 400px;
+    height: 400px;
+    background: rgba(51, 48, 48, 0.68);
+}   
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+} */
+
+
+
+
